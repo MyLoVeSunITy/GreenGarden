@@ -1,0 +1,83 @@
+@import "colors"
+
+.subheader
+  background-color: $subheader-color
+  width: 100%
+  height: 45px
+  display: flex
+  justify-content: center
+  align-items: end
+.headerbg
+  background-color: $header-color
+  height: 240px
+  width: 100%
+body 
+  font-family: Roboto
+  display: flex
+  flex-direction: column
+  font-style: normal
+  font-weight: normal
+  line-height: normal
+nav ul 
+  font-family: Pangolin
+  display: flex
+  font-size: 18pt
+  list-style: none
+  color: $navclr
+.navbar-collapse ul li 
+  width: 20%
+  text-align: center
+  box-shadow: inset 0px 6px 4px rgba(0, 0, 0, 0.5)
+  border-radius: 0px 0px 10px 10px
+nav ul li:first-child 
+  background-color: $bc1
+nav li:nth-child(2)
+  background-color: $bc2
+nav li:nth-child(3)
+  background-color: $bc3
+nav li:nth-child(4)
+  background-color: $bc4
+nav ul li:last-child
+  background-color: $bc5
+.navbar-collapse ul li a
+  display: block
+  text-decoration: none
+  color: $w
+  padding: 15px 30px 7.5px 30px
+  &:hover 
+    text-shadow: 0px 2.5px 5px #000
+    color: #E5E5E5
+    box-shadow: 0px 5px 15px #000
+    border-radius: 0px 0px 10px 10px
+img .logo
+  height: 174px
+  width: auto
+  padding-top: 5px
+.navbar-collapse ul li a.pa
+  padding-bottom: 19.5%
+.bgitem 
+  width: 216px
+  height: 200px
+  background: url(../img/bgroze.png)
+  background-repeat: no-repeat
+  background-size: contain
+.vhod
+  background: url(../svg/registration.svg)
+.cart 
+  background: url(../svg/online-store-shopping-cart.svg)
+.i
+  width: 55px
+  background-repeat: no-repeat
+  background-size: contain
+.hcontent
+  color: #fff 
+  font-size: 18pt
+.subheader p
+  padding: 0.4em
+.subheader .col-md:first-child
+  max-height: 45px
+.subheader .col-md:last-child
+  max-height: 45px
+.hcontent .col-md-5
+  max-height: 100px
+  align-self: center
