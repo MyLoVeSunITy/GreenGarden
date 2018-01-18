@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v18-cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Pangolin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Pangolin Regular'), local('Pangolin-Regular'),
+       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.svg#Pangolin') format('svg'); /* Legacy iOS */
+}
 *{margin:0;padding:0}
   html {
   line-height: 1.15; /* 1 */ 
@@ -194,4 +218,138 @@ template {
 }
 [hidden] {
   display: none;
+}
+.search {
+    width: 60%;/* Ширина поля с кнопкой */
+    border: 1px solid #000; /* Параметры рамки */
+    min-height: 45px; /* Минимальная высота */
+    background: #FFFAFA;
+    border-radius: 2px;
+    text-align:center;
+    display:inline-flex;
+       }
+   input[type="search"] {
+    display:inline-block;
+    border: 1px solid #fff; /* Убираем рамку */
+    outline: none; /* Убираем свечение в Chrome и Safari */
+    -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+    width:100%; /* Ширина поля */
+    height:45px;
+    vertical-align: middle; /* Выравнивание по середине */
+    padding:18px 0px 9px 5px
+   }
+   input[type="submit"] {
+    width: 60px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    position:relative;
+    top:2.5px;
+    border: none; /* Убираем рамку */
+    border: 1px #fff solid;
+    background: url(../svg/search.svg) no-repeat; /* Параметры фона */
+    background-size:cover
+   }
+   input[type="search"]::-webkit-input-placeholder {
+    color: #213148
+   } 
+   input[type="search"]::-moz-placeholder {
+    color: #213148
+   }
+.btn {
+    text-decoration:none;
+     font-size: 30px;
+    background: -moz-linear-gradient(#7D953F, #AFCFC5);
+    background: -webkit-gradient(linear, 0 0, 0 90%, from(#7D953F), to(#AFCFC5));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7D953F', endColorstr='#AFCFC5');
+    padding: 13px 5px 13px 5px;
+    color: #333;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius:75px;
+    border-bottom:1px solid #7D953F;
+    box-shadow: 0px 10px 0px #7D953F, 0px 15px 15px #000000;
+    width:80%;
+    text-align:center;
+   }
+   .btn:hover,.btn:active{
+    color: #213148;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px 1px 0 #fff;
+    background: -moz-linear-gradient(#AFCFC5, #7D953F);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#AFCFC5), to(#7D953F));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFCFC5', endColorstr='#7D953F');
+    border-bottom:1px solid #AFCFC5;
+    box-shadow: 0px 10px 0px #AFCFC5, 0px 15px 15px #000000;
+   }
+a[class~="btn"] {
+    color: #F2F5FA;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+
+@media print {
+    *,::after,::before {
+        text-shadow: none!important;
+        box-shadow: none!important
+    }
+
+    a,a:visited {
+        text-decoration: underline
+    }
+
+    abbr[title]::after {
+        content: " (" attr(title) ")"
+    }
+
+    pre {
+        white-space: pre-wrap!important
+    }
+
+    blockquote,pre {
+        border: 1px solid #999;
+        page-break-inside: avoid
+    }
+
+    thead {
+        display: table-header-group
+    }
+
+    img,tr {
+        page-break-inside: avoid
+    }
+
+    h2,h3,p {
+        orphans: 3;
+        widows: 3
+    }
+
+    h2,h3 {
+        page-break-after: avoid
+    }
+
+    .navbar {
+        display: none
+    }
+
+    .badge {
+        border: 1px solid #000
+    }
+
+    .table {
+        border-collapse: collapse!important
+    }
+
+    .table td,.table th {
+        background-color: #fff!important
+    }
+
+    .table-bordered td,.table-bordered th {
+        border: 1px solid #ddd!important
+    }
 }
