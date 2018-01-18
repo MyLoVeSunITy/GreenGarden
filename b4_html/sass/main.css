@@ -186,7 +186,8 @@ img .logo {
 
 .ib {
   display: inline-flex;
-  padding-top: 2.5%; }
+  padding-top: 4%;
+  justify-content: flex-end; }
 
 .w-25 {
   display: inline-block;
@@ -200,6 +201,7 @@ img .logo {
 
 .use {
   background-image: url(../img/showme.png);
+  background-repeat: no-repeat;
   background-size: contain;
   height: 51px; }
 
