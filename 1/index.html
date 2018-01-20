@@ -1,28 +1,10 @@
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/roboto-v18-cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v18-cyrillic-ext_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-}
-@font-face {
-  font-family: 'Pangolin';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Pangolin Regular'), local('Pangolin-Regular'),
-       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/pangolin-v3-cyrillic-ext_latin-regular.svg#Pangolin') format('svg'); /* Legacy iOS */
-}
-*{margin:0;padding:0}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title>GreenGarden</title>
+  <style>
+  *{margin:0;padding:0}
   html {
   line-height: 1.15; /* 1 */ 
   -ms-text-size-adjust: 100%; /* 2 */
@@ -219,21 +201,55 @@ template {
 [hidden] {
   display: none;
 }
-.search {
-    width: 60%;/* Ширина поля с кнопкой */
+body {font-family:Roboto;display:flex;flex-direction:column;font-style:normal;font-weight:normal;line-height:normal}
+.subheader{
+  background:#C4BEBE;
+  height:45px;
+  width:100%
+}
+.headerbg{
+  background-color:#213148;
+  height:240px;
+  width:100%
+}
+nav,.subheader {width:100%;display:flex;justify-content:center;align-items:end}
+.subheader{color:#213148;font-size:18pt}
+
+nav ul {font-family:Pangolin;display:flex;font-size:18pt;list-style:none;color:#FCF7F7}
+nav ul li {
+  width:20%;
+  text-align:center;
+  box-shadow: inset 0px 6px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 0px 0px 10px 10px;
+}
+nav ul li:first-child{background-color:#7EAB0A}
+nav li:nth-child(2){background-color:#FA9393}
+nav li:nth-child(3){background-color:#7A7979}
+nav li:nth-child(4){background-color:#404C5C}
+nav ul li:last-child{background-color:#B0B229}
+.pa{padding-bottom:19.5%}
+nav ul li a{display:block;text-decoration:none;color:#fff;padding:15px 30px 7.5px 30px}
+nav ul li a:hover {
+  text-shadow:0px 2.5px 5px #000;
+  color:#E5E5E5;
+  box-shadow:0px 5px 15px #000;
+  border-radius:0px 0px 10px 10px}
+
+   .search {
+    width: 380px; /* Ширина поля с кнопкой */
     border: 1px solid #000; /* Параметры рамки */
     min-height: 45px; /* Минимальная высота */
     background: #FFFAFA;
     border-radius: 2px;
     text-align:center;
-    display:inline-flex;
-       }
+    display:inline-flex
+   }
    input[type="search"] {
     display:inline-block;
     border: 1px solid #fff; /* Убираем рамку */
     outline: none; /* Убираем свечение в Chrome и Safari */
     -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
-    width:100%; /* Ширина поля */
+    width:320px; /* Ширина поля */
     height:45px;
     vertical-align: middle; /* Выравнивание по середине */
     padding:18px 0px 9px 5px
@@ -241,116 +257,99 @@ template {
    input[type="submit"] {
     width: 60px; /* Ширина кнопки */
     height: 40px; /* Высота кнопки */
-    cursor: pointer;
     position:relative;
     top:2.5px;
     border: none; /* Убираем рамку */
-    border: 1px #fff solid;
-    background: url(../svg/search.svg) no-repeat; /* Параметры фона */
+    background: url(svg/search.svg) no-repeat; /* Параметры фона */
     background-size:cover
    }
-   input[type="search"]::-webkit-input-placeholder {
-    color: #213148
-   } 
-   input[type="search"]::-moz-placeholder {
-    color: #213148
-   }
-.btn {
+   .btn {
     text-decoration:none;
      font-size: 30px;
     background: -moz-linear-gradient(#7D953F, #AFCFC5);
     background: -webkit-gradient(linear, 0 0, 0 90%, from(#7D953F), to(#AFCFC5));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7D953F', endColorstr='#AFCFC5');
-    padding: 13px 5px 13px 5px;
+    padding: 28px 19px 35px 103px;
     color: #333;
     -moz-border-radius: 40px;
     -webkit-border-radius: 40px;
-    border-radius:75px;
+    border-radius: 40px;
     border-bottom:1px solid #7D953F;
     box-shadow: 0px 10px 0px #7D953F, 0px 15px 15px #000000;
-    width:70%;
-    text-align:center;
    }
    .btn:hover,.btn:active{
-    color: #213148;
-    text-shadow:
-      -1px -1px 0 #fff,
-      1px -1px 0 #fff,
-      -1px 1px 0 #fff,
-      1px 1px 0 #fff;
     background: -moz-linear-gradient(#AFCFC5, #7D953F);
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#AFCFC5), to(#7D953F));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AFCFC5', endColorstr='#7D953F');
     border-bottom:1px solid #AFCFC5;
     box-shadow: 0px 10px 0px #AFCFC5, 0px 15px 15px #000000;
    }
-a[class~="btn"] {
-    color: #F2F5FA;
-    text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-}
+   .vhod{
+    background:url(svg/registration.svg);
+   }
+   .cart {background:url(svg/online-store-shopping-cart.svg);}
+    .i{
+    width:55px;
+    background-repeat:no-repeat;
+    background-size:contain
+   }
+   .fl {
+    display:flex;
+   }
+   .bgitem {width:216px;height:200px;background: url(img/bgroze.png);background-repeat:no-repeat;
+    background-size:contain}
+    .hcontent{color:#fff;font-size:18pt}
+</style>
+</head>
+<body>
+  <header class="headerbg">
+   <div class=subheader>
+    <div class="fl">
+      <a href="#" class="i cart"></a>
+<p style="padding:0.4em">Ваша корзина: заполнить</p>
 
+</div>
+<img style="height:174px;width:auto;padding-top:5px" src="img/logo.png" alt="">
 
-@media print {
-    *,::after,::before {
-        text-shadow: none!important;
-        box-shadow: none!important
-    }
+<div class="fl">
+  <p style="padding:0.4em">Вход/Регистрация</p>
+  <a href="#" class="i vhod"></a>
+</div>
+   
+</div>
+<div class="fl hcontent">
+<div class="bgitem">
+ </div>
+ <form> 
+  <div class="search">
+<input type="search" name="q" placeholder="Поиск...">
+<input type="submit" value=""></div>
+</form>
+<div>
+  <p> Режим работы:<br>
+  <span>Пн-Вс 9.00-22.00</span>
+</p>
+</div>
+<div style="display:flex;flex-flow:row;align-items:flex-end;justify-content:space-between;width:40%">
+<div>г. Тюмень ул. Михаила Сперанского 37</div> <div>+7(992)309-18-19</div>
+</div>
 
-    a,a:visited {
-        text-decoration: underline
-    }
+</div>
 
-    abbr[title]::after {
-        content: " (" attr(title) ")"
-    }
-
-    pre {
-        white-space: pre-wrap!important
-    }
-
-    blockquote,pre {
-        border: 1px solid #999;
-        page-break-inside: avoid
-    }
-
-    thead {
-        display: table-header-group
-    }
-
-    img,tr {
-        page-break-inside: avoid
-    }
-
-    h2,h3,p {
-        orphans: 3;
-        widows: 3
-    }
-
-    h2,h3 {
-        page-break-after: avoid
-    }
-
-    .navbar {
-        display: none
-    }
-
-    .badge {
-        border: 1px solid #000
-    }
-
-    .table {
-        border-collapse: collapse!important
-    }
-
-    .table td,.table th {
-        background-color: #fff!important
-    }
-
-    .table-bordered td,.table-bordered th {
-        border: 1px solid #ddd!important
-    }
-}
+  </header>
+  <nav>
+  <ul>
+    <li><a href="">Букеты и<br> Композиции</a></li>
+    <li><a href="" class="pa">Цветы</a></li>
+    <li><a href="">Воздушные <br>шары</a></li>
+    <li><a href="">Мягкие игрушки</a></li>
+    <li><a href="" class="pa">Открытки</a></li>
+  </ul>
+</nav>
+<main>
+<div>
+<a href="#" class=btn>Бесплатная Доставка </a>
+</div>
+</main>
+</body>
+</html>
