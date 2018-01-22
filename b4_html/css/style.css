@@ -257,7 +257,7 @@ template {
    }
 .btn {
     text-decoration:none;
-     font-size: 30px;
+    font-size: 1.875em;
     background: -moz-linear-gradient(#7D953F, #AFCFC5);
     background: -webkit-gradient(linear, 0 0, 0 90%, from(#7D953F), to(#AFCFC5));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7D953F', endColorstr='#AFCFC5');
@@ -292,7 +292,11 @@ a[class~="btn"] {
       -1px 1px 0 #000,
       1px 1px 0 #000;
 }
-
+@media (max-width: 1024px) {
+.btn {
+  font-size: 1em
+}
+}
 
 @media print {
     *,::after,::before {
