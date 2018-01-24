@@ -1,3 +1,7 @@
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 .subheader {
   background-color: #C4BEBE;
   width: 100%;
@@ -209,12 +213,30 @@ img .logo {
 .w-25 {
   display: inline-block;
   width: 25%;
-  padding-left: 5%; }
+  margin-left: 10%; }
 
 .w-75 {
   display: inline-block;
   width: 75%;
   margin-top: 10px; }
+
+.ww-75 {
+  display: inline-block;
+  width: 75%;
+  margin-left: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.ww-100 {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 10px; }
+
+.w-100 {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: flex-end; }
 
 .use {
   background-image: url(../img/showme.png);
@@ -263,5 +285,69 @@ img .logo {
   color: #fff; }
   .footer .container-fluid {
     padding-top: 10px; }
+
+.airful {
+  font-family: Airfool;
+  color: #213148;
+  font-size: 2.5em;
+  text-shadow: 0px 10px 15px #524D4D;
+  text-align: center; }
+
+.card-title {
+  font-family: Pangolin;
+  color: #213148;
+  font-weight: 800;
+  text-shadow: -0.5px -0.5px 0 #192B45, 0.5px -0.5px 0 #192B45, -0.5px 0.5px 0 #192B45, 0.5px 0.5px 0 #192B45;
+  font-size: 2em; }
+
+.flma {
+  display: flex;
+  margin: auto;
+  align-self: center; }
+
+.bs {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75); }
+
+.sa {
+  justify-content: space-around; }
+
+.btn-more {
+  text-decoration: none;
+  background: -moz-linear-gradient(#213148, #6869e6);
+  background: -webkit-gradient(linear, 0 0, 0 90%, from(#213148), to(#6869e6));
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-radius: 75px;
+  box-shadow: 0px 10px 0px #213148, 0px 10px 10px #000000;
+  font-size: 2em;
+  border-bottom: 1px solid #213148;
+  display: inline-flex; }
+  .btn-more:hover, .btn-more:active {
+    background: -moz-linear-gradient(#6869e6, #213148);
+    background: -webkit-gradient(linear, 0 0, 0 90%, from(#6869e6), to(#213148));
+    box-shadow: 0px 5px 0px #6869e6, 0px 5px 5px #000000;
+    border-bottom: 1px solid #6869e6; }
+
+.btn-p {
+  padding: 0.5em 1em 0.5em 2em;
+  font-family: Roboto;
+  color: #fff; }
+
+.btn-pp {
+  padding: 0.5em 2em 0.5em 2em;
+  font-family: Roboto;
+  color: #fff; }
+
+.btn-end-img {
+  margin-top: 5%;
+  background: url(../img/btn-end.png) no-repeat center center;
+  height: auto;
+  width: 100px; }
+
+.mb-10 {
+  margin-bottom: 5rem; }
+
+.mb-12 {
+  margin-bottom: 7.5rem; }
 
 /*# sourceMappingURL=main.css.map */
