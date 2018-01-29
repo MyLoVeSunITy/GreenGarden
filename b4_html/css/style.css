@@ -338,7 +338,7 @@ a[class~="btn2"] img {
 }
 .btn {
     text-decoration:none;
-    font-size: 1.875em;
+    font-size: 1.375em;
     background: -moz-linear-gradient(#7D953F, #AFCFC5);
     background: -webkit-gradient(linear, 0 0, 0 90%, from(#7D953F), to(#AFCFC5));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7D953F', endColorstr='#AFCFC5');
@@ -646,6 +646,7 @@ a[class~="btn"] {
 .mr-auto,
 .mx-auto {
   margin-right: auto;
+  margin-left: auto;
 }
 .mb-auto,
 .my-auto {

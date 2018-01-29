@@ -31,8 +31,14 @@ body
   max-width: 1140px
   width: 100%
   min-width: 100%
+  //background-color: $header-color
+  //margin: -5% 21% -5% 21%
+  margin-top: -2.5%
+  margin-bottom: -2.5%
 .navbar-nav
-  width: 100%
+  width: 57%
+.collapse 
+  display: flex
 nav ul 
   font-family: Pangolin
   display: flex
@@ -41,6 +47,7 @@ nav ul
   color: $navclr2
 .navbar-collapse ul li 
   width: 20%
+  justify-content: center
   text-align: center
   box-shadow: inset 0px 6px 4px rgba(0, 0, 0, 0.5)
   border-radius: 0px 0px 10px 10px
@@ -69,8 +76,8 @@ img .logo
   width: auto
   padding-top: 5px
 .navbar-collapse ul li a.pa
-  padding-top: 21%
-  padding-bottom: 21%
+  padding-top: 23.5%
+  padding-bottom: 23.5%
 .bgitem 
   background: url(../img/bgroze.png)
   background-repeat: no-repeat
@@ -154,6 +161,9 @@ img .logo
   width: 120%
 .ptd
   padding-top: 9%
+.ptdt
+  padding-top: 9%
+  margin-top: -2.6%
 .bg
   background: url(../img/bg.png) center center no-repeat
   background-size: cover
@@ -167,7 +177,7 @@ img .logo
   height: 780px
   position: absolute
   right: 0px
-  top: 100px
+  top: 245px
 .ib
   display: inline-flex
   padding-top: 4%
@@ -306,3 +316,18 @@ img .logo
   margin-left: 1em
   background-repeat: no-repeat
   background-size: contain
+@media only screen and (max-width: 90em)
+  .btn p , .pinner
+    font-size: calc(100vw / 75)
+@media only screen and (min-width: 48em)
+  nav ul
+    flex-direction: row
+  //.navbar-collapse ul li
+   // width: 100%
+@media only screen and (max-width: 48em)
+  nav ul
+    flex-direction: column
+  .btn p 
+    display: none
+  img.w-25
+      width: 100%

@@ -74,10 +74,12 @@
 .slick-prev
 {
     left: -80px;
+    left: calc(100vw / -20);
 }
 [dir='rtl'] .slick-prev
 {
     right: -80px;
+    right: calc(100vw / -20);
     left: auto;
 }
 .slick-prev:before
@@ -92,11 +94,13 @@
 .slick-next
 {
     right: -80px;
+    right: calc(100vw / -20);
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
     left: -80px;
+    left: calc(100vw / -20);
 }
 .slick-next:before
 {
